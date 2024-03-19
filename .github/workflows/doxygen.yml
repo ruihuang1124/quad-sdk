@@ -5,7 +5,7 @@ on:
     branches:
       - main
       - devel
-      - melodic_devel_gh_pages_doxygen_updates
+      - noetic_devel_gh_pages_doxygen_updates
   page_build:
 
 jobs:

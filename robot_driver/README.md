@@ -11,7 +11,7 @@ The source code is released under a [MIT License](quad-sdk/LICENSE).
 Affiliation: [Robomechanics Lab](https://www.cmu.edu/me/robomechanicslab/)<br />
 Maintainers: Ardalan Tajbakhsh (atajbakh@andrew.cmu.edu) **
 
-The Robot Driver package has been tested under [ROS] Melodic 18.04.
+The Robot Driver package has been tested under [ROS] Noetic 20.04.
 This is research code, expect that it changes often and any fitness for a particular purpose is disclaimed.
 
 ### Unit Tests
