@@ -14,7 +14,7 @@ addpath('./utils')
 addpath('./generated_codes/matlab')
 
 % Require CasADi for autodiff
-addpath('./utils/casadi')
+addpath('./utils/casadi-linux')
 import casadi.*
 
 x0 = SX.sym('x0', [parameter.n, 1]); % First finite element
