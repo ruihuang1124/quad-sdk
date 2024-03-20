@@ -24,8 +24,4 @@ sudo apt install -y ros-noetic-gazebo-ros-control -y
 sudo apt install -y ros-noetic-effort-controllers -y
 sudo apt install -y ros-noetic-robot-state-publisher -y
 sudo apt install -y ros-noetic-imu-tools -y
-<<<<<<< HEAD
 sudo apt install -y ros-noetic-message-to-tf -y
-=======
-sudo apt install -y ros-noetic-message-to-tf -y
->>>>>>> 9c0e297b844cc6cd35ed617810b638b80d62d60e
