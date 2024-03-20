@@ -2,7 +2,11 @@ jobs:
   build-and-test:
     working_directory: /legged_ws/src
     docker:
+<<<<<<< HEAD
       - image: osrf/ros:neotic-desktop-full
+=======
+      - image: osrf/ros:noetic-desktop-full
+>>>>>>> 9c0e297b844cc6cd35ed617810b638b80d62d60e
     steps:
       - checkout
       - run:
@@ -20,15 +24,25 @@ jobs:
           name: "Load ROS params in the background"
           command: |
             source /opt/ros/noetic/setup.bash
+<<<<<<< HEAD
             source /legged_ws/devel/setup.bash
+=======
+            source /catkin_ws/devel/setup.bash
+>>>>>>> 9c0e297b844cc6cd35ed617810b638b80d62d60e
             roslaunch quad_utils load_global_params.launch load_robot_params:=true
           background: true
       - run:
           name: "Run tests"
           command: |
+<<<<<<< HEAD
             cd /legged_ws
             source /opt/ros/noetic/setup.bash
             source /legged_ws/devel/setup.bash
+=======
+            cd /catkin_ws
+            source /opt/ros/noetic/setup.bash
+            source /catkin_ws/devel/setup.bash
+>>>>>>> 9c0e297b844cc6cd35ed617810b638b80d62d60e
             catkin run_tests -j2 -l2 && catkin_test_results
       - run:
           name: "Run soft linting checks"
