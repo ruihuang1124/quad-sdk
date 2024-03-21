@@ -51,6 +51,7 @@ include_directories(
 # JN Added
 set(MY_LIB_SOURCES
   src/global_body_planner.cpp
+  src/global_body_reference_generator.cpp
   src/planning_utils.cpp
   src/global_body_plan.cpp
   src/graph_class.cpp
@@ -72,10 +73,13 @@ add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EX
 # With catkin_make all packages are built within a single CMake context
 # The recommended prefix ensures that target names across packages don't collide
 add_executable(${PROJECT_NAME}_node src/global_body_planner_node.cpp)
+add_executable(global_body_reference_generator_node src/global_body_reference_generator_node.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(global_body_reference_generator_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(${PROJECT_NAME}_node
@@ -83,6 +87,10 @@ target_link_libraries(${PROJECT_NAME}_node
   ${catkin_LIBRARIES}
 )
 
+target_link_libraries(global_body_reference_generator_node
+        ${PROJECT_NAME}
+        ${catkin_LIBRARIES}
+        )
 #############
 ## Testing ##
 #############
