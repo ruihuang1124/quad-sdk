@@ -10,5 +10,7 @@ int main(int argc, char **argv) {
     ros::init(argc, argv, "global_body_reference_generator");
     ros::NodeHandle nh;
 
+    GlobalBodyReferenceGenerator global_body_reference_generator(nh);
+    global_body_reference_generator.spin();
     return 0;
 }
