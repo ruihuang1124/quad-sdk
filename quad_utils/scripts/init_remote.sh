@@ -1,6 +1,6 @@
 #!/bin/bash
-echo "Sourcing ~/legged_ws/devel/setup.bash"
-source ~/legged_ws/devel/setup.bash
+echo "Sourcing ~/catkin_ws/devel/setup.bash"
+source ~/catkin_ws/devel/setup.bash
 
 echo "Connected to robot with wifi or ethernet? (w/e)"
 read input
